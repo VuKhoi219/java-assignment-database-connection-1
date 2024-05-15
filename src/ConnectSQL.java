@@ -7,14 +7,6 @@ public class ConnectSQL {
     String password = "";
     Scanner sc = new Scanner(System.in);
 
-    public ConnectSQL() {
-        try (Connection connection = DriverManager.getConnection(url, user, password)) {
-            System.out.println("Connected");
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
     public void show() {
         String sql = "select * from post";
         try (Connection connection = DriverManager.getConnection(url, user, password)) {
