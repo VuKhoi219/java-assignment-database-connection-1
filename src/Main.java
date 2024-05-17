@@ -8,27 +8,26 @@ public class Main {
     }
 
     public void choice() {
-        ConnectSQL connectSQL = new ConnectSQL();
         PostController postController = new PostController();
         Scanner scanner = new Scanner(System.in);
         boolean flag = true;
         while (flag) {
             System.out.println("Enter your selection");
-            System.out.println("1. Show");
-            System.out.println("2. Search");
-            System.out.println("3. Insert");
-            System.out.println("4. Delete");
+            System.out.println("1. Add new Post");
+            System.out.println("2. Show list of newly added posts");
+            System.out.println("3. Search post(by ID)");
+            System.out.println("4. Delete post(by ID)");
             System.out.println("5. Exit");
             int choice = scanner.nextInt();
             switch (choice) {
                 case 1:
-                    postController.show();
+                    postController.insertPost();
                     break;
                 case 2:
-                    postController.searchPost();
+                    postController.show();
                     break;
                 case 3:
-                    postController.insertPost();
+                    postController.searchPost();
                     break;
                 case 4:
                     postController.deletePost();
