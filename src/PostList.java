@@ -1,14 +1,23 @@
 public class PostList {
     private long id;
-    private String article_title, detail, avatar, writer, date_of_writing;
+    private String article_title, detail, avatar, author, date_written, main_content;
 
-    public PostList(long id, String article_title, String detail, String avatar, String writer, String date_of_writing) {
+    public String getMain_content() {
+        return main_content;
+    }
+
+    public void setMain_content(String main_content) {
+        this.main_content = main_content;
+    }
+
+    public PostList(long id, String article_title, String detail, String avatar, String author, String date_written, String main_content) {
         this.id = id;
         this.article_title = article_title;
         this.detail = detail;
         this.avatar = avatar;
-        this.writer = writer;
-        this.date_of_writing = date_of_writing;
+        this.author = author;
+        this.main_content = main_content;
+        this.date_written = date_written;
     }
 
     public String getArticle_title() {
@@ -27,12 +36,12 @@ public class PostList {
         this.avatar = avatar;
     }
 
-    public String getDate_of_writing() {
-        return date_of_writing;
+    public String getDate_written() {
+        return date_written;
     }
 
-    public void setDate_of_writing(String date_of_writing) {
-        this.date_of_writing = date_of_writing;
+    public void setDate_written(String date_of_writing) {
+        this.date_written = date_of_writing;
     }
 
     public String getDetail() {
@@ -51,11 +60,11 @@ public class PostList {
         this.id = id;
     }
 
-    public String getWriter() {
-        return writer;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setWriter(String writer) {
-        this.writer = writer;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 }
