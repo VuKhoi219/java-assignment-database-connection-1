@@ -3,7 +3,9 @@ import java.util.Scanner;
 public class PostController {
     ConnectSQL sql = new ConnectSQL();
     Scanner sc = new Scanner(System.in);
-
+    public void show(){
+        sql.show();
+    }
     public void insertPost() {
         System.out.println("===============================================================");
         System.out.println("Enter ID: ");

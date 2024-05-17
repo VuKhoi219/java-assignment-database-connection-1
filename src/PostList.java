@@ -2,14 +2,6 @@ public class PostList {
     private long id;
     private String article_title, detail, avatar, author, date_written, main_content;
 
-    public String getMain_content() {
-        return main_content;
-    }
-
-    public void setMain_content(String main_content) {
-        this.main_content = main_content;
-    }
-
     public PostList(long id, String article_title, String detail, String avatar, String author, String date_written, String main_content) {
         this.id = id;
         this.article_title = article_title;
@@ -66,5 +58,13 @@ public class PostList {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public String getMain_content() {
+        return main_content;
+    }
+
+    public void setMain_content(String main_content) {
+        this.main_content = main_content;
     }
 }

@@ -22,7 +22,7 @@ public class Main {
             int choice = scanner.nextInt();
             switch (choice) {
                 case 1:
-                    connectSQL.show();
+                    postController.show();
                     break;
                 case 2:
                     postController.searchPost();
