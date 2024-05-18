@@ -11,6 +11,7 @@ public class ConnectSQL {
             Statement Statement = connection.createStatement();
             ResultSet resultSet = Statement.executeQuery(sql);
             while (resultSet.next()) {
+                System.out.println("===============================================================");
                 System.out.println("ID: " + resultSet.getLong(1));
                 System.out.println("Article_title: " + resultSet.getString(2));
                 System.out.println("Detail: " + resultSet.getString(3));
@@ -32,6 +33,7 @@ public class ConnectSQL {
             ps.setLong(1, id);
             ResultSet resultSet = ps.executeQuery();
             while (resultSet.next()) {
+                System.out.println("===============================================================");
                 System.out.println("ID: " + resultSet.getLong(1));
                 System.out.println("Article_title: " + resultSet.getString(2));
                 System.out.println("Detail: " + resultSet.getString(3));
